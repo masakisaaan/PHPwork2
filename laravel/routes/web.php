@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
 
 Route::get('/',function(){
   $alcohol = DB::table('alcohol')->get();
-  return view("home");
+  return view("home",["alcohol" => $alcohol]);
 });
 
 Route::get('/detail', function(Request $request){
@@ -26,5 +26,3 @@ Route::get('/detail', function(Request $request){
         "alcohol" => $alcohol
     ]);
 });
-Auth::routes();
-

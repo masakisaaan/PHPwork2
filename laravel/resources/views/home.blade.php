@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
     <title>酒のベスト</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -45,211 +44,27 @@
 
         </div>
     </div>
-
-		<div id="marketing">
+	   <div id="marketing">
         <div class="title">
         <h1>Whisky</h1>
         </div>
 			<div class="container">
 				<div class="row">
-
+				@foreach($alcohol as $alcohol)
 					<div class="3u">
+					
 						<section>
-							<a href="/detail?id=1" class="image full"><img src="images/itemimg/johnniewalker_black.jpg" alt=""></a>
+							<a href="/detail?id=1" class="image full"><img src="{{$alcohol->img}}" alt=""></a>
 							<header>
-								<h2>Johnnie Walker Black</h2>
+								<h2>{{$alcohol->name}}</h2>
 							</header>
-							<p class="price">¥2,000円<span>(税込)</span></p>
-                            				
+							<p class="price">¥{{$alcohol->price}}<span>(税込)</span></p>     				
 						</section>
+						
 					</div>
-
-					<div class="3u">
-						<section>
-							<a href="/detail?id=2" class="image full"><img src="images/itemimg/johnniewalker_doubleblack.jpg" alt=""></a>
-							<header>
-								<h2>Johnnie Walker Double Black</h2>
-							</header>
-							<p class="price">¥2,500円<span>(税込)</span></p>			
-						</section>
+					@endforeach
 					</div>
-
-					<div class="3u">
-						<section>
-							<a href="/detail?id=3" class="image full"><img src="images/itemimg/johnniewalker_green.jpg" alt=""></a>
-							<header>
-								<h2>Johnnie Walker Green</h2>
-							</header>
-							<p class="price">¥5,000円<span>(税込)</span></p>				
-						</section>
 					</div>
-
-					<div class="3u">
-						<section>
-							<a href="/detail?id=4" class="image full"><img src="images/itemimg/johnniewalker_blue.jpg" alt=""></a>
-							<header>
-								<h2>Johnnie Walker Blue</h2>
-							</header>
-							<p class="price">¥13,500円<span>(税込)</span></p>				
-						</section>
-					</div>
-
-				</div>
-			</div>
-		</div>
-
-        	<div id="marketing">
-			<div class="container">
-				<div class="row">
-
-					<div class="3u">
-						<section>
-							<a href="/detail?id=5" class="image full"><img src="images/itemimg/johnniewalker_black.jpg" alt=""></a>
-							<header>
-								<h2>Johnnie Walker Black</h2>
-							</header>
-							<p class="price">¥2,000円<span>(税込)</span></p>
-                            				
-						</section>
-					</div>
-
-					<div class="3u">
-						<section>
-							<a href="/detail?id=6" class="image full"><img src="images/itemimg/johnniewalker_doubleblack.jpg" alt=""></a>
-							<header>
-								<h2>Johnnie Walker Double Black</h2>
-							</header>
-							<p class="price">¥2,500円<span>(税込)</span></p>			
-						</section>
-					</div>
-
-					<div class="3u">
-						<section>
-							<a href="/detail?id=7" class="image full"><img src="images/itemimg/johnniewalker_green.jpg" alt=""></a>
-							<header>
-								<h2>Johnnie Walker Green</h2>
-							</header>
-							<p class="price">¥5,000円<span>(税込)</span></p>				
-						</section>
-					</div>
-
-					<div class="3u">
-						<section>
-							<a href="/detail?id=8" class="image full"><img src="images/itemimg/johnniewalker_blue.jpg" alt=""></a>
-							<header>
-								<h2>Johnnie Walker Blue</h2>
-							</header>
-							<p class="price">¥13,500円<span>(税込)</span></p>				
-						</section>
-					</div>
-
-				</div>
-			</div>
-		</div>
-
-        	<div id="marketing">
-			<div class="container">
-				<div class="row">
-
-					<div class="3u">
-						<section>
-							<a href="/detail?id=9" class="image full"><img src="images/itemimg/johnniewalker_black.jpg" alt=""></a>
-							<header>
-								<h2>Johnnie Walker Black</h2>
-							</header>
-							<p class="price">¥2,000円<span>(税込)</span></p>
-                            				
-						</section>
-					</div>
-
-					<div class="3u">
-						<section>
-							<a href="/detail?id=10" class="image full"><img src="images/itemimg/johnniewalker_doubleblack.jpg" alt=""></a>
-							<header>
-								<h2>Johnnie Walker Double Black</h2>
-							</header>
-							<p class="price">¥2,500円<span>(税込)</span></p>			
-						</section>
-					</div>
-
-					<div class="3u">
-						<section>
-							<a href="/detail?id=11" class="image full"><img src="images/itemimg/johnniewalker_green.jpg" alt=""></a>
-							<header>
-								<h2>Johnnie Walker Green</h2>
-							</header>
-							<p class="price">¥5,000円<span>(税込)</span></p>				
-						</section>
-					</div>
-
-					<div class="3u">
-						<section>
-							<a href="/detail?id=12" class="image full"><img src="images/itemimg/johnniewalker_blue.jpg" alt=""></a>
-							<header>
-								<h2>Johnnie Walker Blue</h2>
-							</header>
-							<p class="price">¥13,500円<span>(税込)</span></p>				
-						</section>
-					</div>
-
-				</div>
-			</div>
-		</div>
-
-        	<div id="marketing">
-			<div class="container">
-				<div class="row">
-
-					<div class="3u">
-						<section>
-							<a href="/detail?id=13" class="image full"><img src="images/itemimg/johnniewalker_black.jpg" alt=""></a>
-							<header>
-								<h2>Johnnie Walker Black</h2>
-							</header>
-							<p class="price">¥2,000円<span>(税込)</span></p>
-                            				
-						</section>
-					</div>
-
-					<div class="3u">
-						<section>
-							<a href="/detail?id=14" class="image full"><img src="images/itemimg/johnniewalker_doubleblack.jpg" alt=""></a>
-							<header>
-								<h2>Johnnie Walker Double Black</h2>
-							</header>
-							<p class="price">¥2,500円<span>(税込)</span></p>			
-						</section>
-					</div>
-
-					<div class="3u">
-						<section>
-							<a href="/detail?id=15" class="image full"><img src="images/itemimg/johnniewalker_green.jpg" alt=""></a>
-							<header>
-								<h2>Johnnie Walker Green</h2>
-							</header>
-							<p class="price">¥5,000円<span>(税込)</span></p>				
-						</section>
-					</div>
-
-					<div class="3u">
-						<section>
-							<a href="/detail?id=16" class="image full"><img src="images/itemimg/johnniewalker_blue.jpg" alt=""></a>
-							<header>
-								<h2>Johnnie Walker Blue</h2>
-							</header>
-							<p class="price">¥13,500円<span>(税込)</span></p>				
-						</section>
-					</div>
-
-				</div>
-			</div>
-		</div>
-
-        	
-
-
-
-
 
     <!-- Copyright -->
     <div id="copyright">
