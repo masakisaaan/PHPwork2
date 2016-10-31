@@ -5,11 +5,10 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-	<link href="css/flexslider.css" rel="stylesheet" type="text/css" />
+	<link href="css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
     <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	    <script src="js/jquery.flexslider-min.js"></script>
     <script src="js/skel.min.js"></script>
     <script src="js/skel-panels.min.js"></script>
     <script src="js/init.js"></script>
@@ -20,12 +19,6 @@
 		</noscript>
     <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
-
-	    <script type="text/javascript" charset="utf-8">
-        $(window).load(function() {
-            $('.flexslider').flexslider();
-        });
-    </script>
 </head>
 
 <body class="homepage">
@@ -46,21 +39,13 @@
                 <ul>
                     <li class="active"><a href="login.html">ログイン</a></li>
                     <li><a href="create.html">新規会員登録</a></li>
-					<li class="cart"><a href="cart"><img src="images/cart.png"></a>
+					<li><a href="cart"><i class="fa fa-shopping-cart fa-3x fa-white"></i></a></li>
                     
                 </ul>
             </nav>
         </div>
 	</div>
 
-	    <div class="flexslider">
-        <ul class="slides">
-            <li><img src="images/slider1.png" /></li>
-			<li><img src="images/slider1.png" /></li>
-			<li><img src="images/slider1.png" /></li>
-			<li><img src="images/slider1.png" /></li>
-
-        </ul>
     </div>
 
 	<div id="marketing">
