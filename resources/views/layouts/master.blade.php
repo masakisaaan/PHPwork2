@@ -5,16 +5,16 @@
 <title>@yield('title') | sake </title>
 <meta name="description" itemprop="description" content="@yield('description')">
 <meta name="keywords" itemprop="keywords" content="@yield('keywords')">
-<link href="css/font-awesome.min.css" rel="stylesheet">
-<link href="css/common/style.css" rel="stylesheet">
-<link href="css/common/style-desktop.css" rel="stylesheet">
-<link href="css/common/style-mobile.css" rel="stylesheet">
-<link href="css/common/style-1000px.css" rel="stylesheet">
-<link href="css/common/skel-noscript.css" rel="stylesheet">
-<script src="js/common.jquery.min.js"></script>
-<script src="js/common/skel.min.js"></script>
-<script src="js/common/skel-panels.min.js"></script>
-<script src="js/common/init.js"></script>
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/common/style.css" rel="stylesheet">
+<link href="/css/common/style-desktop.css" rel="stylesheet">
+<link href="/css/common/style-mobile.css" rel="stylesheet">
+<link href="/css/common/style-1000px.css" rel="stylesheet">
+<link href="/css/common/skel-noscript.css" rel="stylesheet">
+<script src="/js/common/jquery.min.js"></script>
+<script src="/js/common/skel.min.js"></script>
+<script src="/js/common/skel-panels.min.js"></script>
+<script src="/js/common/init.js"></script>
 @yield('css')
 @yield('js')
 </head>
@@ -39,11 +39,9 @@
       </div>
 
 //main
-      <div id="main">
-       <div class="container">
+
         @yield('main')
-       </div>
-       </div>
+
 
 //footer
     <!-- Copyright -->
