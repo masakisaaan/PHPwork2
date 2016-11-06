@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
 
@@ -13,15 +12,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
-
-
          DB::table('alcohol')->truncate();
          $now = Carbon::now();
 
-             $jonniewalker_black = [
+        $jonniewalker_black = [
         "name" => "Jonnie Walker Black Label",
-        "img" => "images/itemimg/johnniewalker_black.jpg",
+        "img" => "img/item/johnniewalker_black.jpg",
         "description" => "ジョニーウォーカーブラックラベル",
         "price" => "2000",
           "created_at" => $now,
@@ -30,7 +26,7 @@ class DatabaseSeeder extends Seeder
 
         $jonniewalker_doubleblack = [
         "name" => "Jonnie Walker Double Black",
-        "img" => "images/itemimg/johnniewalker_doubleblack.jpg",
+        "img" => "img/item/johnniewalker_doubleblack.jpg",
         "description" => "ジョニーウォーカーダブルブラック",
         "price" => "2500",
           "created_at" => $now,
@@ -39,7 +35,7 @@ class DatabaseSeeder extends Seeder
 
    $jonniewalker_green = [
         "name" => "Jonnie Walker Green Label",
-        "img" => "images/itemimg/johnniewalker_green.jpg",
+        "img" => "img/item/johnniewalker_green.jpg",
         "description" => "ジョニーウォーカーグリーンラベル",
         "price" => "5000",
           "created_at" => $now,
@@ -48,7 +44,7 @@ class DatabaseSeeder extends Seeder
 
     $jonniewalker_blue = [
         "name" => "Jonnie Walker Blue Label",
-        "img" => "images/itemimg/johnniewalker_blue.jpg",
+        "img" => "img/item/johnniewalker_blue.jpg",
         "description" => "至高のウイスキー",
         "price" => "13500",
           "created_at" => $now,
@@ -57,7 +53,7 @@ class DatabaseSeeder extends Seeder
 
        $henessy = [
         "name" => "Henessy",
-        "img" => "images/itemimg/hennessy.jpg",
+        "img" => "img/item/hennessy.jpg",
         "description" => "Henessy",
         "price" => "2500",
           "created_at" => $now,
@@ -66,7 +62,7 @@ class DatabaseSeeder extends Seeder
 
        $henessy_black = [
         "name" => "Henessy Black",
-        "img" => "images/itemimg/hennessy_black.jpg",
+        "img" => "img/item/hennessy_black.jpg",
         "description" => "Henessy Black",
         "price" => "4500",
           "created_at" => $now,
@@ -75,7 +71,7 @@ class DatabaseSeeder extends Seeder
 
        $bowmore = [
         "name" => "Bowmore",
-        "img" => "images/itemimg/bowmore.jpg",
+        "img" => "img/item/bowmore.jpg",
         "description" => "Bowmore",
         "price" => "4000",
           "created_at" => $now,
@@ -84,7 +80,7 @@ class DatabaseSeeder extends Seeder
 
       $macallan = [
         "name" => "Macallan",
-        "img" => "images/itemimg/macallan.jpg",
+        "img" => "img/item/macallan.jpg",
         "description" => "Macallan",
         "price" => "5000",
           "created_at" => $now,
@@ -93,7 +89,7 @@ class DatabaseSeeder extends Seeder
 
       $oldpar = [
         "name" => "Old Par",
-        "img" => "images/itemimg/oldpar.jpg",
+        "img" => "img/item/oldpar.jpg",
         "description" => "Old Par",
         "price" => "2500",
           "created_at" => $now,
@@ -102,7 +98,7 @@ class DatabaseSeeder extends Seeder
 
       $fourroses = [
         "name" => "Four Roses",
-        "img" => "images/itemimg/fourroses.jpg",
+        "img" => "img/item/fourroses.jpg",
         "description" => "Four Roses",
         "price" => "1500",
           "created_at" => $now,
@@ -111,7 +107,7 @@ class DatabaseSeeder extends Seeder
 
       $ballantine17 = [
         "name" => "Ballantine 17 Years",
-        "img" => "images/itemimg/ballantine_17years.jpg",
+        "img" => "img/item/ballantine_17years.jpg",
         "description" => "Ballantine17Years",
         "price" => "10000",
           "created_at" => $now,
@@ -120,7 +116,7 @@ class DatabaseSeeder extends Seeder
 
     $ballantine21 = [
         "name" => "Ballantine 21 Years",
-        "img" => "images/itemimg/ballantine_21years.jpg",
+        "img" => "img/item/ballantine_21years.jpg",
         "description" => "Ballantine21Years",
         "price" => "15000",
           "created_at" => $now,
@@ -140,8 +136,6 @@ class DatabaseSeeder extends Seeder
         $fourroses,
         $ballantine17,
         $ballantine21,
-
-        
         ]);
     }
 }

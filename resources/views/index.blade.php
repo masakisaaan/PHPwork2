@@ -11,26 +11,22 @@
 @endsection
 
 @section('main')
-	<div id="marketing">
-        <div class="title">
-        <h1>Whisky</h1>
-        </div>
-			<div class="container">
-				<div class="row">
-				//foreach($alcohol as $alcohol)
-					<div class="3u">
-					
-						<section>
-							<!--<a href="/detail?id=1" class="image full"><img src="" alt=""></a>-->
-							<header>
-								<h2></h2>
-							</header>
-							<p class="price">¥<span>(税込)</span></p>     				
-						</section>
-						
-					</div>
-				//endforeach
-					</div>
-					</div>
-					</div>
+<div class="container-fluid">
+<div class="title">
+<h1 class="category">Whisky</h1>
+</div>	
+				
+<div class="row">
+@foreach($alcohol as $alcohol)
+<div class="col-xs-12 col-sm-6 col-md-4">
+<a href="/detail?id=1"><img src="{{  $alcohol->img }}" class="img-responsive" alt="#"></a>
+<h2 class="itemname">{{$alcohol->name}}</h2>
+<p class="price">¥{{ $alcohol->price }}<span>(税込)</span></p>
+</div>
+
+@endforeach
+
+</div>
+</div>
+
 @endsection

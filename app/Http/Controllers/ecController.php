@@ -9,6 +9,21 @@ use App\Http\Requests;
 class ecController extends Controller
 {
     public function index(){
-        return view ('index');
+        $alcohol = \DB::table('alcohol')->get();
+        return view('index',compact('alcohol'));
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
