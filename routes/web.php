@@ -15,3 +15,5 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/','ecController@index')->name('index');
+Route::get('/detail', 'ecController@detail');
+Route::get('/cart', 'ecController@cart');

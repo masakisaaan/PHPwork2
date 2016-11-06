@@ -25,7 +25,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand" href="/">
 				酒
 			</a>
 		</div>
@@ -34,14 +34,14 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#">ログイン</a></li>
 				<li><a href="#">新規会員登録</a></li>
-				<li><a href="#">(カート)</a></li>
+				<li><a href="/cart">(カート)</a></li>
 			</ul>
 	</div>
 </nav>
 
 
         @yield('main')
-        
+
     <footer class="footer">
   <div class="container">
     <p class="text-muted">Copyright 2016 All Rights Reserved.</p>

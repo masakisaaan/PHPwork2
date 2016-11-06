@@ -23,7 +23,7 @@
 <h2 class="itemname">{{$alcohol->name}}</h2>
 <p class="price">¥{{ $alcohol->price }}<span>(税込)</span></p>
 <div class="itembutton">
-<button type="button" class="btn btn-success detail-button">詳細</button>
+<a href="/detail"><button type="button" class="btn btn-success detail-button">詳細</button></a>
 <button type="button" class="btn btn-danger cart-button">カートに入れる</button>
 </div>
 </div>
