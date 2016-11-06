@@ -13,17 +13,8 @@ class ecController extends Controller
         return view('index',compact('alcohol'));
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+     public function cart(){
+        $alcohol = session()->get("alcohol",[]);
+        return view("cart",compact('alcohol'));
+    }
 }

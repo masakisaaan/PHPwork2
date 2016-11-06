@@ -22,6 +22,10 @@
 <a href="/detail?id=1"><img src="{{  $alcohol->img }}" class="img-responsive" alt="#"></a>
 <h2 class="itemname">{{$alcohol->name}}</h2>
 <p class="price">¥{{ $alcohol->price }}<span>(税込)</span></p>
+<div class="itembutton">
+<button type="button" class="btn btn-success detail-button">詳細</button>
+<button type="button" class="btn btn-danger cart-button">カートに入れる</button>
+</div>
 </div>
 
 @endforeach

@@ -14,4 +14,4 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/','ecController@index');
+Route::get('/','ecController@index')->name('index');
