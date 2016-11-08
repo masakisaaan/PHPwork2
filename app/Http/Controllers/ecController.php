@@ -1,9 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 
 class ecController extends Controller
@@ -13,8 +12,9 @@ class ecController extends Controller
         return view('index',compact('alcohol'));
     }
 
-    public function detail(){
-        $alcohol = \DB::table('alcohol')->get();
+    public function detail(Request $request){
+        $id = $request->get("id");
+        $alcohol = DB::table('alcohol')->where('id', $id)->first();
         return view('detail/index',compact('alcohol'));
     }
 

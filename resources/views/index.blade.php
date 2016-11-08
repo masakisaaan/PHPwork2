@@ -19,11 +19,11 @@
 <div class="row">
 @foreach($alcohol as $alcohol)
 <div class="col-xs-12 col-sm-6 col-md-4">
-<a href="/detail?id=1"><img src="{{  $alcohol->img }}" class="img-responsive" alt="#"></a>
+<img src="{{  $alcohol->img }}" class="img-responsive" alt="#"></a>
 <h2 class="itemname">{{$alcohol->name}}</h2>
 <p class="price">¥{{ $alcohol->price }}<span>(税込)</span></p>
 <div class="itembutton">
-<a href="/detail"><button type="button" class="btn btn-success detail-button">詳細</button></a>
+<a href="/detail?id={{ $alcohol->id }}"><button type="button" class="btn btn-success detail-button">詳細</button></a>
 <button type="button" class="btn btn-danger cart-button">カートに入れる</button>
 </div>
 </div>
