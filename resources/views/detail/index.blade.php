@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Home')
+@section('title', 'Detail')
 
 @section('css')
     <link href="/css/pages/index.css" rel="stylesheet">
@@ -21,7 +21,9 @@
 <p class="text-center component">{{$alcohol->name}}</p>
 <p class="text-center component">{{$alcohol->description}}</p>
 <p class="text-center component">{{$alcohol->price}}円</p>
+<form action="/cart?id={{$alcohol->id}}" method="post">
 <div class="form-group form-inline stockarea">
+{{ csrf_field() }}
     <label for="exampleSelect1">数量:</label>
     <select class="form-control" id="exampleSelect1">
       <option>1</option>
@@ -30,8 +32,9 @@
       <option>4</option>
       <option>5</option>
     </select>
-  <button type="button" class="btn btn-primary cartbutton">カートに入れる</button>
+  <button type="submit" class="btn btn-primary cartbutton" value="カートに入れる">カートに入れる</button>
 </div>
+</form>
 
 </div>
 </div>
