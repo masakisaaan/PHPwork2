@@ -14,8 +14,14 @@ use Illuminate\Http\Request;
 |
 */
 
+
 Route::get('/','ecController@index')->name('index');
 Route::get('/detail', 'ecController@detail')->name('detail');
 Route::get('/cart', 'ecController@cart')->name('cart');
 Route::post('/cart','ecController@insertCart');
 Route::post('/cart/clear','ecController@clearCart');
+
+Auth::routes();
+Route::get('/auth/home', 'HomeController@index');
+
+

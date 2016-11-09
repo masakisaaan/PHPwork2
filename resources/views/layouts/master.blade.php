@@ -34,8 +34,8 @@
 		
 		<div class="collapse navbar-collapse" id="navbarEexample7">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">ログイン</a></li>
-				<li><a href="#">新規会員登録</a></li>
+				<li><a href="/auth/login">ログイン</a></li>
+				<li><a href="/auth/register">新規会員登録</a></li>
 				<li><a href="/cart">(カート)</a></li>
 			</ul>
 	</div>
