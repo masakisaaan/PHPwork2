@@ -1,0 +1,21 @@
+#detailimg {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.component {
+    font-size: 20px;
+}
+
+#detailname {
+    margin-top: 50px;
+}
+
+.cartbutton {
+    margin-left: 20px;
+}
+
+.stockarea {
+    margin-top: 110px;
+    text-align: center;
+}
