@@ -1,9 +1,9 @@
-@extends('layouts.master')
+@extends('layouts.auth')
 
 @section('title', 'Login')
 
 @section('css')
-    <link href="/css/pages/index.css" rel="stylesheet">
+<!-- none -->
 @endsection
 
 @section('js')

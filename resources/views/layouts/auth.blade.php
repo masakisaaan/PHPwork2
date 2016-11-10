@@ -7,7 +7,8 @@
 <meta name="keywords" itemprop="keywords" content="@yield('keywords')">
     <link href="/css/common/font-awesome.min.css" rel="stylesheet">
     <link href="/css/common/bootstrap.min.css" rel="stylesheet">
-	<link href="/css/index/index.css" rel="stylesheet">
+    <link href="/css/index/index.css" rel="stylesheet">
+	<link href="/css/pages/index.css" rel="stylesheet">
 	<link href="/css/common/style.css" rel="stylesheet">
     <link href="/css/common/reset.css" rel="stylesheet">
     <script src="/js/common/jquery.min.js"></script>
@@ -32,6 +33,7 @@
 			</a>
 		</div>
 		
+        <!--
 		<div class="collapse navbar-collapse" id="navbarEexample7">
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="/auth/login">ログイン</a></li>
@@ -39,10 +41,11 @@
 				<li><a href="/cart">(カート)</a></li>
 			</ul>
 	</div>
+    -->
 </nav>
 
 
-        @yield('main')
+@yield('main')
 
     <footer class="footer">
   <div class="container">
