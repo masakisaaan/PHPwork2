@@ -53,8 +53,16 @@
     font-size: 30px;
 }
 
+.omb_authsocialTitle {
+    text-align: center;
+    line-height: 300%;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
 .omb_login .omb_socialButtons a {
-    color: white; // In yourUse @body-bg 
+    color: white;
+    /*In yourUse @body-bg */
     opacity: 0.9;
 }
 
@@ -97,10 +105,12 @@
     position: absolute;
     left: 50%;
     top: -0.6em;
-    margin-left: -1.5em;
+    margin-left: -2.0em;
     background-color: white;
-    width: 3em;
+    width: 4em;
     text-align: center;
+    font-size: 18px;
+    color: black;
 }
 
 .omb_login .omb_loginForm .input-group.i {
