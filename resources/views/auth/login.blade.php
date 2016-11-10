@@ -47,40 +47,42 @@
 
 		<div class="row omb_row-sm-offset-3">
 			<div class="col-xs-12 col-sm-6">	
-			    <form class="omb_loginForm" action="" autocomplete="off" method="POST">
+			    <form class="omb_loginForm" action="{{ url('/login') }}" autocomplete="off" method="POST">
+                {{ csrf_field() }}
+
+                <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}"> 
 					<div class="input-group">
 						<span class="input-group-addon"><i class="fa fa-user"></i></span>
-						<input type="text" class="form-control" name="username" placeholder="メールアドレスまたはユーザー名">
+						<input type="text" class="form-control" name="email" value="{{ old('email') }}" placeholder="メールアドレス">
+                         
 					</div>
-					<span class="help-block"></span>
-										
+					  @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                                </div>
+                                
+				   <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}" style="margin-bottom:-7px;">				
 					<div class="input-group">
 						<span class="input-group-addon"><i class="fa fa-lock"></i></span>
 						<input  type="password" class="form-control" name="password" placeholder="パスワード">
 					</div>
-                   <span class="help-block form-margin"></span>
-					<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+                    @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                                </div>
+
+				<p class="omb_forgotPwd" style="margin-bottom:30px;">
+					<a href="{{ url('/password/reset') }}" style="font-size:14px;">パスワードを忘れた</a>
+				</p>
+					<button class="btn btn-lg btn-primary btn-block loginbutton center-block" type="submit">ログイン</button>
 				</form>
 			</div>
-    	</div>
-		<div class="row omb_row-sm-offset-3">
-			<div class="col-xs-12 col-sm-3">
-				
-                <label class="checkbox">
-					<!-- <input type="checkbox" value="remember-me">Remember Me -->
-				</label>
-            
-			</div>
-			<div class="col-xs-12 col-sm-3">
-				<p class="omb_forgotPwd">
-					<a href="#">パスワードを忘れた</a>
-				</p>
-			</div>
-		</div>	    	
-	</div>
-
-
-
-        </div>
+    	</div>	    	
+	  </div>
+    </div>
 @endsection
 

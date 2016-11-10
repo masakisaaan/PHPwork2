@@ -58,3 +58,11 @@ body>.container {
     padding-right: 15px;
     padding-left: 15px;
 }
+
+.fa-mycolor {
+    color: #9d9d9d;
+}
+
+.fa-cart {
+    font-size: 20px;
+}

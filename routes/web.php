@@ -22,6 +22,6 @@ Route::post('/cart','ecController@insertCart');
 Route::post('/cart/clear','ecController@clearCart');
 
 Auth::routes();
-Route::get('/auth/home', 'HomeController@index');
+Route::get('/home', 'HomeController@index');
 
 
