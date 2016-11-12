@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
+use App\Http\Requests;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +24,4 @@ Route::post('/cart','ecController@insertCart');
 Route::post('/cart/clear','ecController@clearCart');
 
 Auth::routes();
-Route::get('/home', 'HomeController@index');
-
-
+Route::get('/logout' , 'Auth\LoginController@logout');

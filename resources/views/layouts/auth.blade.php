@@ -35,8 +35,17 @@
 		<div class="collapse navbar-collapse" id="navbarEexample7">
 			<ul class="nav navbar-nav navbar-right">
 
+                @if (Auth::guest())
+                    {{-- ログインしていない時 --}}
+
+                <li><a href="/login">ログイン</a></li>
+				<li><a href="/register">新規会員登録</a></li>
 				<li><a href="/cart"><i class="fa fa-shopping-cart fa-mycolor fa-cart" aria-hidden="true"></i></a></li>
-				<li><a href="http://localhost:8000/logout"><i class="fa fa-btn fa-sign-out"></i>ログアウト</a></li>
+                @else
+                    {{-- ログインしている時 --}}
+				<li><a href="/cart"><i class="fa fa-shopping-cart fa-mycolor fa-cart" aria-hidden="true"></i></a></li>
+				<li><a href="/logout"><i class="fa fa-btn fa-sign-out"></i>ログアウト</a></li>
+				@endif
 			</ul>
 	</div>
 </nav>

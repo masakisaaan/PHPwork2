@@ -34,9 +34,38 @@
 		
 		<div class="collapse navbar-collapse" id="navbarEexample7">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/login">ログイン</a></li>
+					    @if (Auth::guest())
+                    {{-- ログインしていない時 --}}
+
+                <li><a href="/login">ログイン</a></li>
 				<li><a href="/register">新規会員登録</a></li>
 				<li><a href="/cart"><i class="fa fa-shopping-cart fa-mycolor fa-cart" aria-hidden="true"></i></a></li>
+                @else
+                    {{-- ログインしている時 --}}
+				<li><a href="/cart"><i class="fa fa-shopping-cart fa-mycolor fa-cart" aria-hidden="true"></i></a></li>
+				<li><a id="sampleButton"><i class="fa fa-btn fa-sign-out"></i>ログアウト</a>
+
+				<div class="modal fade" id="sampleModal" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+				<h4 class="modal-title">ログアウト</h4>
+			</div>
+			<div class="modal-body">
+				<p>本当にログアウトしますか？</p>
+				<!-- <span>ログアウトすると、トップページに戻ります</span> -->
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">いいえ</button>
+				<a href="/logout"><button type="button" class="btn btn-primary">はい</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+				</li>
+				@endif
 			</ul>
 	</div>
 </nav>
@@ -49,6 +78,12 @@
     <p class="text-muted">Copyright 2016 All Rights Reserved.</p>
   </div>
 </footer>
-
+<script>
+$( function() {
+	$('#sampleButton').click( function () {
+		$('#sampleModal').modal();
+	});
+});
+</script>
 </body>
 </html>
