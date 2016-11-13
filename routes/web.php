@@ -41,6 +41,6 @@ Route::get('/login/facebook', 'Auth\SocialController@getFacebookAuth');
 Route::get('/login/facebook/callback', 'Auth\SocialController@getFacebookAuthCallback');
 
 //google
-//Route::get('/login/google', 'Auth\SocialController@getGoogleAuth');
-//Route::get('/login/google/callback', 'Auth\SocialController@getGoogleAuthCallback');
+Route::get('/login/google', 'Auth\SocialController@getGoogleAuth');
+Route::get('/login/google/callback', 'Auth\SocialController@getGoogleAuthCallback');
 

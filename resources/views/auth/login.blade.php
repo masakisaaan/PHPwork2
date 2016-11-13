@@ -31,7 +31,7 @@
 		        </a>
 	        </div>	
         	<div class="col-xs-4 col-sm-2">
-		        <a href="#" class="btn btn-lg btn-block omb_btn-google">
+		        <a href="/login/google" class="btn btn-lg btn-block omb_btn-google">
 			        <i class="fa fa-google-plus visible-xs"></i>
 			        <span class="hidden-xs">Google+</span>
 		        </a>

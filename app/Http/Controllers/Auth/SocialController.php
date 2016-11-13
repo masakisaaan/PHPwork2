@@ -48,7 +48,7 @@ class SocialController extends Controller
     }
 
     // Google
-/*
+
     public function getGoogleAuth()
     {
         return Socialite::driver('google')->redirect();
@@ -63,7 +63,7 @@ class SocialController extends Controller
 
         return redirect($this->redirectTo);
     }
-*/
+
     public function createOrGetUser($providerUser, $provider)
     {
         $account = SocialAccount::firstOrCreate([
