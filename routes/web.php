@@ -29,6 +29,7 @@ Route::post('/cart/clear','ecController@clearCart');
 Auth::routes();
 Route::get('/logout' , 'Auth\LoginController@logout');
 
+//old auth 
 //Route::get('auth/twitter', 'Auth\AuthController@redirectToProvider');
 //Route::get('auth/twitter/callback', 'Auth\AuthController@handleProviderCallback');
 
@@ -43,4 +44,8 @@ Route::get('/login/facebook/callback', 'Auth\SocialController@getFacebookAuthCal
 //google
 Route::get('/login/google', 'Auth\SocialController@getGoogleAuth');
 Route::get('/login/google/callback', 'Auth\SocialController@getGoogleAuthCallback');
+
+//line Coming Soon..
+//Route::get('/login/line', 'Auth\SocialController@getLineAuth');
+//Route::get('/login/line/callback', 'Auth\SocialController@getLineAuthCallback');
 

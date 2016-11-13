@@ -64,6 +64,24 @@ class SocialController extends Controller
         return redirect($this->redirectTo);
     }
 
+    // Line
+
+/*
+    public function getLineAuth()
+    {
+        return Socialite::driver('line')->redirect();
+    }
+
+    public function getLineAuthCallback()
+    {
+        $lineUser = Socialite::driver('line')->user();
+
+        $user = $this->createOrGetUser($lineUser, 'line');
+        Auth::login($user, true);
+
+        return redirect($this->redirectTo);
+    }
+*/
     public function createOrGetUser($providerUser, $provider)
     {
         $account = SocialAccount::firstOrCreate([
