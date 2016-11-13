@@ -39,4 +39,8 @@ class ecController extends Controller
         session()->flush();
         return redirect()->route('cart');
     }
+
+     public function Registercomplete(){
+        return view('auth/complete');
+    }
 }

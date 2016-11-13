@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Ecsite2 extends Migration
+class CreateSocialAccountsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class Ecsite2 extends Migration
      */
     public function up()
     {
-            Schema::create('alcohol', function (Blueprint $table) {
+        Schema::create('social_accounts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('img');
-            $table->string('description');
-            $table->unsignedInteger('price');
+            $table->integer('user_id')->unsigned()->nullable();
+            $table->string('provider_user_id');
+            $table->mediumText('provider_access_token')->nullable();
+            $table->string('provider');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -30,6 +31,6 @@ class Ecsite2 extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('social_accounts');
     }
 }

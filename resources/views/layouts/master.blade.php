@@ -9,6 +9,7 @@
     <link href="/css/common/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/index/index.css" rel="stylesheet">
 	<link href="/css/common/style.css" rel="stylesheet">
+	<link href="/css/pages/index.css" rel="stylesheet">
     <link href="/css/common/reset.css" rel="stylesheet">
     <script src="/js/common/jquery.min.js"></script>
     <script src="/js/common/bootstrap.min.js"></script>
