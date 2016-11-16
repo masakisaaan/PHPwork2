@@ -66,7 +66,7 @@ class SocialController extends Controller
 
     // Line
 
-/*
+
     public function getLineAuth()
     {
         return Socialite::driver('line')->redirect();
@@ -81,7 +81,7 @@ class SocialController extends Controller
 
         return redirect($this->redirectTo);
     }
-*/
+
     public function createOrGetUser($providerUser, $provider)
     {
         $account = SocialAccount::firstOrCreate([

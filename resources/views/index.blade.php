@@ -23,7 +23,27 @@
 <h2 class="itemname">{{$alcohol->name}}</h2>
 <p class="price">¥{{ $alcohol->price }}<span>(税込)</span></p>
 <div class="itembutton">
-<a href="/detail?id={{ $alcohol->id }}"><button type="button" class="btn btn-success detail-button">詳細</button></a>
+<a href="/detail?id={{ $alcohol->id }}"><button type="button" class="btn btn-success detail-button">詳細</button>
+<!-- 遷移先を"/welcome"に変更 -->
+<form action="/welcome" method="POST">
+<script
+  src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+  data-key="sk_test_OiFzPckKmAKXJym3InTlddXa"　<!-- ここにAPIキーをコピペ -->
+  data-amount="1000"　<!-- 表示する課金額を記入 -->
+  data-name="TEST"
+  data-description="TESTTEST"
+  data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+  data-locale="ja"<!-- autoでも日本語表示になりましたが、念のためjaに変更 -->
+  data-currency="jpy">
+        <!-- LaravelユーザーはCSRFトークン忘れずに。 -->
+        //$.ajaxSetup({
+        //    headers: {
+        //        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        //    }
+        //})
+</script>
+</form>
+</a>
 <button type="button" class="btn btn-danger cart-button">カートに入れる</button>
 </div>
 </div>
