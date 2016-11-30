@@ -51,31 +51,3 @@ Route::get('/login/line/callback', 'Auth\SocialController@getLineAuthCallback');
 
 //basic mail
 Route::get('/mail', 'MailController@basic_email');
-
-//stripe
-Route::post('/welcome', function () {
-
-    //ここにstripeアカウントのAPIキーをコピペ
-　　　　　　　\Stripe\Stripe::setApiKey("sk_test_OiFzPckKmAKXJym3InTlddXa");
-
-    /* 以下「Creating Charges」からのコピペ */
-
-    // Get the credit card details submitted by the form
-    $token = $_POST['stripeToken'];
-
-    // Create a charge: this will charge the user's card
-    try {
-      $charge = \Stripe\Charge::create(array(
-        "amount" => 1000, // 課金額はココで調整
-        "currency" => "jpy",
-        "source" => $token,
-        "description" => "Example charge"
-        ));
-    } catch(\Stripe\Error\Card $e) {
-      // The card has been declined
-    }
-
-    // サンクスメール送る...
-
-    return view('/done');
-});

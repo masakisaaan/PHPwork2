@@ -15,6 +15,7 @@
     <script src="/js/common/bootstrap.min.js"></script>
 </head>
 @yield('css')
+@yield('js')
 
 </head>
 <body>
