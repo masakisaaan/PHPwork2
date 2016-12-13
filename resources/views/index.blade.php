@@ -25,7 +25,6 @@
 <div class="itembutton">
 <a href="/detail?id={{ $alcohol->id }}"><button type="button" class="btn btn-success detail-button">詳細</button>
 </a>
-<button type="button" class="btn btn-danger cart-button">カートに入れる</button>
 </div>
 </div>
 

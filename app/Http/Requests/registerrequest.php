@@ -28,8 +28,8 @@ class registerrequest extends FormRequest
             'kana' => 'rewuired|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
-            'phone' => 'required|max:20,
-            
+            'phone' => 'required|max:20',
+
         ];
     }
 }

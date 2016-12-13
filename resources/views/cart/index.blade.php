@@ -20,15 +20,15 @@
       <th>商品名</th>
       <th>価格</th>
       <th>数量</th>
-      <th></th>
+      <th>削除</th>
     </tr>
   </thead>
   <tbody>
 @foreach($alcohols as $alcohol)
     <tr>
       <td>{{$alcohol->name}}</td>
-      <td>{{$alcohol->description}}</td>
       <td>{{$alcohol->price}}</td>
+      <td></td>
       <td></td>
     </tr>
 @endforeach

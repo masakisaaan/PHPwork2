@@ -32,7 +32,7 @@
       <option>4</option>
       <option>5</option>
     </select>
-  <button type="submit" class="btn btn-primary cartbutton" value="カートに入れる">カートに入れる</button>
+  <button type="submit" class="btn btn-danger cartbutton" value="カートに入れる">カートに入れる</button>
 </div>
 </form>
 
