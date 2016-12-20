@@ -76,7 +76,11 @@
 }
 
 .omb_login .omb_socialButtons .omb_btn-twitter {
-    background: #00aced;
+    background: #cccccc
+}
+
+.omb_login .omb_socialButtons .omb_btn-line {
+    background: #5ae628;
 }
 
 .omb_login .omb_socialButtons .omb_btn-google {

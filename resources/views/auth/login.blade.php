@@ -25,7 +25,7 @@
 		        </a>
 	        </div>
         	<div class="col-xs-4 col-sm-2">
-		        <a href="/login/twitter" class="btn btn-lg btn-block omb_btn-twitter">
+		        <a href="#" class="btn btn-lg btn-block omb_btn-twitter">
 			        <i class="fa fa-twitter visible-xs"></i>
 			        <span class="hidden-xs">Twitter</span>
 		        </a>
@@ -76,7 +76,7 @@
                                 </div>
 
 				<p class="omb_forgotPwd" style="margin-bottom:30px;">
-					<a href="{{ url('/password/reset') }}" style="font-size:14px;">パスワードを忘れた</a>
+					<a href="{{ url('/password/reset') }}" style="font-size:14px; line-height:2.5;">パスワードを忘れた</a>
 				</p>
 					<button class="btn btn-lg btn-primary btn-block loginbutton center-block" type="submit">ログイン</button>
 				</form>

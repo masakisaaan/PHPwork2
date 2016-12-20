@@ -17,13 +17,13 @@
 </div>	
 				
 <div class="row">
-@foreach($alcohol as $alcohol)
+@foreach($item as $item)
 <div class="col-xs-12 col-sm-6 col-md-4">
-<img src="{{  $alcohol->img }}" class="img-responsive" alt="#"></a>
-<h2 class="itemname">{{$alcohol->name}}</h2>
-<p class="price">¥{{ $alcohol->price }}<span>(税込)</span></p>
+<img src="{{  $item->item_img }}" class="img-responsive" alt="#"></a>
+<h2 class="itemname">{{$item->item_name}}</h2>
+<p class="price">¥{{ $item->price }}<span>(税込)</span></p>
 <div class="itembutton">
-<a href="/detail?id={{ $alcohol->id }}"><button type="button" class="btn btn-success detail-button">詳細</button>
+<a href="/detail?id={{ $item->id }}"><button type="button" class="btn btn-success detail-button">詳細</button>
 </a>
 </div>
 </div>

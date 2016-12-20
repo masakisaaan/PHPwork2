@@ -21,17 +21,23 @@ Route::get('/','ecController@index')->name('index');
 Route::get('/detail', 'ecController@detail')->name('detail');
 Route::get('/cart', 'ecController@cart')->name('cart');
 
-Route::get('/complete', 'ecController@RegisterComplete'); //auth
+Route::post('/cart','ecController@insertCart'); //カート
+Route::get('/cart/delete','ecController@deleteCart'); //カート内商品削除
+Route::post('/cart/clear','ecController@clearCart'); //カートクリア
 
-Route::post('/cart','ecController@insertCart');
-Route::post('/cart/clear','ecController@clearCart');
-
+// Auth
 Auth::routes();
-Route::get('/logout' , 'Auth\LoginController@logout');
+Route::post('/register','Auth\RegisterController@register'); //会員登録ページ
 
-//old auth 
-//Route::get('auth/twitter', 'Auth\AuthController@redirectToProvider');
-//Route::get('auth/twitter/callback', 'Auth\AuthController@handleProviderCallback');
+Route::get('/complete', 'ecController@RegisterComplete'); //会員登録完了ページ
+Route::get('/logout' , 'Auth\LoginController@logout'); //ログアウト
+Route::get('/order/complete', 'ecController@orderComplete'); //注文完了
+
+Route::group(['middleware' => 'auth'], function () {
+Route::post('/order', 'ecController@order')->name('order');
+Route::get('/order', 'ecController@order');
+Route::get('/logout' , 'Auth\LoginController@logout'); //ログアウト
+});
 
 //twitter
 Route::get('/login/twitter', 'Auth\SocialController@getTwitterAuth');
@@ -45,9 +51,6 @@ Route::get('/login/facebook/callback', 'Auth\SocialController@getFacebookAuthCal
 Route::get('/login/google', 'Auth\SocialController@getGoogleAuth');
 Route::get('/login/google/callback', 'Auth\SocialController@getGoogleAuthCallback');
 
-//line Coming Soon..
-Route::get('/login/line', 'Auth\SocialController@getLineAuth');
-Route::get('/login/line/callback', 'Auth\SocialController@getLineAuthCallback');
-
 //basic mail
 Route::get('/mail', 'MailController@basic_email');
+

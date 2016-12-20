@@ -6,6 +6,8 @@ use App\User;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -66,13 +68,20 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'kana' => $data['kana'],
             'email' => $data['email'],
+            'password' => bcrypt($data['password']),
             'zip' => $data['zip'],
             'address1' => $data['address1'],
             'address2' => $data['address2'],
             'address3' => $data['address3'],
             'phone' => $data['phone'],
             'birthday' => $data['birthday'],
-            'password' => bcrypt($data['password']),
         ]);
+    }
+
+    public function register(Request $request)
+    {
+       $data = $request->all();
+       event(new Registered($user = $this->create($data)));
+       return redirect('/');
     }
 }

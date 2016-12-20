@@ -14,11 +14,9 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
-
+                        
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">氏名</label>
 
@@ -132,7 +130,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('pref') ? ' has-error' : '' }}">
-                            <label for="pref" class="col-md-4 control-label">都道府県</label>
+                            <label for="address1" class="col-md-4 control-label">都道府県</label>
                             <div class="col-md-3">
                                  <select class="form-control" name="address1" value="{{ old('address1') }}">
                                 <option value="">選択してください</option>
@@ -225,7 +223,7 @@
                             <label for="address3" class="col-md-4 control-label">建物名</label>
 
                             <div class="col-md-5">
-                                <input id="address3" type="text" class="form-control" name="address3" value="{{ old('address3') }}" required>
+                                <input id="address3" type="text" class="form-control" name="address3" value="{{ old('address3') }}" >
 
                                 @if ($errors->has('address3'))
                                     <span class="help-block">
@@ -247,6 +245,4 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
 @endsection
